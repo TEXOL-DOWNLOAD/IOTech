@@ -1,0 +1,3851 @@
+apiVersion: v2
+name: Texol_213MM2_v1_72
+manufacturer: Texol
+description: Vibration Sensor Profile
+model: 213MM2_v1_72
+labels:
+- ModbusRTU
+deviceResources:
+- name: DataOutput_Count_L
+  description: ''
+  properties:
+    valueType: Uint32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 0
+  isHidden: false
+- name: DataOutput_Count_H
+  description: ''
+  properties:
+    valueType: Uint32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 2
+  isHidden: false
+- name: Device_ID
+  description: ''
+  properties:
+    valueType: String
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 4
+    stringEncoding: ASCII
+    stringRegisterSize: 3
+  isHidden: false
+- name: RPM
+  description: ''
+  properties:
+    valueType: Uint16
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 7
+  isHidden: false
+- name: X_Overall
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 8
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Y_Overall
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 10
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Z_Overall
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 12
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: X_Peak
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 14
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Y_Peak
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 16
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Z_Peak
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 18
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: X_Peak_to_Peak
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 20
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Y_Peak_to_Peak
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 22
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Z_Peak_to_Peak
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 24
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: X_Crest_Factor
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 26
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Y_Crest_Factor
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 28
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Z_Crest_Factor
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 30
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: X_Power_in_Band_01
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 32
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: X_Power_in_Band_02
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 34
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: X_Power_in_Band_03
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 36
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: X_Power_in_Band_04
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 38
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: X_Power_in_Band_05
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 40
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: X_Power_in_Band_06
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 42
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: X_Power_in_Band_07
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 44
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: X_Power_in_Band_08
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 46
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: X_Power_in_Band_09
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 48
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: X_Power_in_Band_10
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 50
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Y_Power_in_Band_01
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 52
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Y_Power_in_Band_02
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 54
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Y_Power_in_Band_03
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 56
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Y_Power_in_Band_04
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 58
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Y_Power_in_Band_05
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 60
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Y_Power_in_Band_06
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 62
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Y_Power_in_Band_07
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 64
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Y_Power_in_Band_08
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 66
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Y_Power_in_Band_09
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 68
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Y_Power_in_Band_10
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 70
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Z_Power_in_Band_01
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 72
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Z_Power_in_Band_02
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 74
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Z_Power_in_Band_03
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 76
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Z_Power_in_Band_04
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 78
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Z_Power_in_Band_05
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 80
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Z_Power_in_Band_06
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 82
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Z_Power_in_Band_07
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 84
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Z_Power_in_Band_08
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 86
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Z_Power_in_Band_09
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 88
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Z_Power_in_Band_10
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 90
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Bearing
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 92
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Losseness
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 94
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Misalignment
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 96
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Unbalance
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 98
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Gear_mesh
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 100
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Van_Pass
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 102
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Bearing_percentage
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 104
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Losseness_percentage
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 106
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Misalignment_percentage
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 108
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Unbalance_percentage
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 110
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Gear_mesh_percentage
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 112
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Van_Pass_percentage
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 114
+    rawType: UINT32
+    scale: 0.001
+  isHidden: false
+- name: Temperature_C
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 116
+    rawType: INT32
+    scale: 0.001
+  isHidden: false
+- name: X_Overall_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 118
+  isHidden: false
+- name: Y_Overall_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 119
+  isHidden: false
+- name: Z_Overall_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 120
+  isHidden: false
+- name: X_Peak_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 121
+  isHidden: false
+- name: Y_Peak_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 122
+  isHidden: false
+- name: Z_Peak_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 123
+  isHidden: false
+- name: X_Peak_to_Peak_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 124
+  isHidden: false
+- name: Y_Peak_to_Peak_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 125
+  isHidden: false
+- name: Z_Peak_to_Peak_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 126
+  isHidden: false
+- name: X_Crest_Factor_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 127
+  isHidden: false
+- name: Y_Crest_Factor_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 128
+  isHidden: false
+- name: Z_Crest_Factor_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 129
+  isHidden: false
+- name: X_Power_in_Band_01_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 130
+  isHidden: false
+- name: X_Power_in_Band_02_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 131
+  isHidden: false
+- name: X_Power_in_Band_03_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 132
+  isHidden: false
+- name: X_Power_in_Band_04_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 133
+  isHidden: false
+- name: X_Power_in_Band_05_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 134
+  isHidden: false
+- name: X_Power_in_Band_06_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 135
+  isHidden: false
+- name: X_Power_in_Band_07_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 136
+  isHidden: false
+- name: X_Power_in_Band_08_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 137
+  isHidden: false
+- name: X_Power_in_Band_09_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 138
+  isHidden: false
+- name: X_Power_in_Band_10_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 139
+  isHidden: false
+- name: Y_Power_in_Band_01_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 140
+  isHidden: false
+- name: Y_Power_in_Band_02_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 141
+  isHidden: false
+- name: Y_Power_in_Band_03_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 142
+  isHidden: false
+- name: Y_Power_in_Band_04_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 143
+  isHidden: false
+- name: Y_Power_in_Band_05_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 144
+  isHidden: false
+- name: Y_Power_in_Band_06_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 145
+  isHidden: false
+- name: Y_Power_in_Band_07_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 146
+  isHidden: false
+- name: Y_Power_in_Band_08_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 147
+  isHidden: false
+- name: Y_Power_in_Band_09_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 148
+  isHidden: false
+- name: Y_Power_in_Band_10_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 149
+  isHidden: false
+- name: Z_Power_in_Band_01_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 150
+  isHidden: false
+- name: Z_Power_in_Band_02_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 151
+  isHidden: false
+- name: Z_Power_in_Band_03_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 152
+  isHidden: false
+- name: Z_Power_in_Band_04_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 153
+  isHidden: false
+- name: Z_Power_in_Band_05_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 154
+  isHidden: false
+- name: Z_Power_in_Band_06_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 155
+  isHidden: false
+- name: Z_Power_in_Band_07_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 156
+  isHidden: false
+- name: Z_Power_in_Band_08_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 157
+  isHidden: false
+- name: Z_Power_in_Band_09_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 158
+  isHidden: false
+- name: Z_Power_in_Band_10_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 159
+  isHidden: false
+- name: Bearing_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 160
+  isHidden: false
+- name: Losseness_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 161
+  isHidden: false
+- name: Misalignment_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 162
+  isHidden: false
+- name: Unbalance_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 163
+  isHidden: false
+- name: Gear_mesh_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 164
+  isHidden: false
+- name: Van_Pass_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 165
+  isHidden: false
+- name: Temperature_QC_code
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: R
+  attributes:
+    primaryTable: INPUT_REGISTERS
+    startingAddress: 166
+  isHidden: false
+- name: User_X_Axis_Sensitivity
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 5
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: User_Y_Axis_Sensitivity
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 7
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: User_Z_Axis_Sensitivity
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 9
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Trigger_Level
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 11
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Delay_Time
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 13
+  isHidden: true
+- name: Analyze
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 14
+  isHidden: true
+- name: RPM_Start
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 15
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: RPM_End
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 17
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: X_Power_in_Band_01_band_order
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 19
+  isHidden: true
+- name: X_Power_in_Band_01_start_order
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 20
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: X_Power_in_Band_01_stop_bandwidth
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 22
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: X_Power_in_Band_01_magnification
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 24
+  isHidden: true
+- name: X_Power_in_Band_02_band_order
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 25
+  isHidden: true
+- name: X_Power_in_Band_02_start_order
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 26
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: X_Power_in_Band_02_stop_bandwidth
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 28
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: X_Power_in_Band_02_magnification
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 30
+  isHidden: true
+- name: X_Power_in_Band_03_band_order
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 31
+  isHidden: true
+- name: X_Power_in_Band_03_start_order
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 32
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: X_Power_in_Band_03_stop_bandwidth
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 34
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: X_Power_in_Band_03_magnification
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 36
+  isHidden: true
+- name: X_Power_in_Band_04_band_order
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 37
+  isHidden: true
+- name: X_Power_in_Band_04_start_order
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 38
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: X_Power_in_Band_04_stop_bandwidth
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 40
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: X_Power_in_Band_04_magnification
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 42
+  isHidden: true
+- name: X_Power_in_Band_05_band_order
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 43
+  isHidden: true
+- name: X_Power_in_Band_05_start_order
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 44
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: X_Power_in_Band_05_stop_bandwidth
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 46
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: X_Power_in_Band_05_magnification
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 48
+  isHidden: true
+- name: X_Power_in_Band_06_band_order
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 49
+  isHidden: true
+- name: X_Power_in_Band_06_start_order
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 50
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: X_Power_in_Band_06_stop_bandwidth
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 52
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: X_Power_in_Band_06_magnification
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 54
+  isHidden: true
+- name: X_Power_in_Band_07_band_order
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 55
+  isHidden: true
+- name: X_Power_in_Band_07_start_order
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 56
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: X_Power_in_Band_07_stop_bandwidth
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 58
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: X_Power_in_Band_07_magnification
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 60
+  isHidden: true
+- name: X_Power_in_Band_08_band_order
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 61
+  isHidden: true
+- name: X_Power_in_Band_08_start_order
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 62
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: X_Power_in_Band_08_stop_bandwidth
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 64
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: X_Power_in_Band_08_magnification
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 66
+  isHidden: true
+- name: X_Power_in_Band_09_band_order
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 67
+  isHidden: true
+- name: X_Power_in_Band_09_start_order
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 68
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: X_Power_in_Band_09_stop_bandwidth
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 70
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: X_Power_in_Band_09_magnification
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 72
+  isHidden: true
+- name: X_Power_in_Band_10_band_order
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 73
+  isHidden: true
+- name: X_Power_in_Band_10_start_order
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 74
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: X_Power_in_Band_10_stop_bandwidth
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 76
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: X_Power_in_Band_10_magnification
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 78
+  isHidden: true
+- name: Y_Power_in_Band_01_band_order
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 79
+  isHidden: true
+- name: Y_Power_in_Band_01_start_order
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 80
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_01_stop_bandwidth
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 82
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_01_magnification
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 84
+  isHidden: true
+- name: Y_Power_in_Band_02_band_order
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 85
+  isHidden: true
+- name: Y_Power_in_Band_02_start_order
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 86
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_02_stop_bandwidth
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 88
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_02_magnification
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 90
+  isHidden: true
+- name: Y_Power_in_Band_03_band_order
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 91
+  isHidden: true
+- name: Y_Power_in_Band_03_start_order
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 92
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_03_stop_bandwidth
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 94
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_03_magnification
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 96
+  isHidden: true
+- name: Y_Power_in_Band_04_band_order
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 97
+  isHidden: true
+- name: Y_Power_in_Band_04_start_order
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 98
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_04_stop_bandwidth
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 100
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_04_magnification
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 102
+  isHidden: true
+- name: Y_Power_in_Band_05_band_order
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 103
+  isHidden: true
+- name: Y_Power_in_Band_05_start_order
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 104
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_05_stop_bandwidth
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 106
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_05_magnification
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 108
+  isHidden: true
+- name: Y_Power_in_Band_06_band_order
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 109
+  isHidden: true
+- name: Y_Power_in_Band_06_start_order
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 110
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_06_stop_bandwidth
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 112
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_06_magnification
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 114
+  isHidden: true
+- name: Y_Power_in_Band_07_band_order
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 115
+  isHidden: true
+- name: Y_Power_in_Band_07_start_order
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 116
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_07_stop_bandwidth
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 118
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_07_magnification
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 120
+  isHidden: true
+- name: Y_Power_in_Band_08_band_order
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 121
+  isHidden: true
+- name: Y_Power_in_Band_08_start_order
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 122
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_08_stop_bandwidth
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 124
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_08_magnification
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 126
+  isHidden: true
+- name: Y_Power_in_Band_09_band_order
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 127
+  isHidden: true
+- name: Y_Power_in_Band_09_start_order
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 128
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_09_stop_bandwidth
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 130
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_09_magnification
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 132
+  isHidden: true
+- name: Y_Power_in_Band_10_band_order
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 133
+  isHidden: true
+- name: Y_Power_in_Band_10_start_order
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 134
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_10_stop_bandwidth
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 136
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_10_magnification
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 138
+  isHidden: true
+- name: Z_Power_in_Band_01_band_order
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 139
+  isHidden: true
+- name: Z_Power_in_Band_01_start_order
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 140
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_01_stop_bandwidth
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 142
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_01_magnification
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 144
+  isHidden: true
+- name: Z_Power_in_Band_02_band_order
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 145
+  isHidden: true
+- name: Z_Power_in_Band_02_start_order
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 146
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_02_stop_bandwidth
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 148
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_02_magnification
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 150
+  isHidden: true
+- name: Z_Power_in_Band_03_band_order
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 151
+  isHidden: true
+- name: Z_Power_in_Band_03_start_order
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 152
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_03_stop_bandwidth
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 154
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_03_magnification
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 156
+  isHidden: true
+- name: Z_Power_in_Band_04_band_order
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 157
+  isHidden: true
+- name: Z_Power_in_Band_04_start_order
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 158
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_04_stop_bandwidth
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 160
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_04_magnification
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 162
+  isHidden: true
+- name: Z_Power_in_Band_05_band_order
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 163
+  isHidden: true
+- name: Z_Power_in_Band_05_start_order
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 164
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_05_stop_bandwidth
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 166
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_05_magnification
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 168
+  isHidden: true
+- name: Z_Power_in_Band_06_band_order
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 169
+  isHidden: true
+- name: Z_Power_in_Band_06_start_order
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 170
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_06_stop_bandwidth
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 172
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_06_magnification
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 174
+  isHidden: true
+- name: Z_Power_in_Band_07_band_order
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 175
+  isHidden: true
+- name: Z_Power_in_Band_07_start_order
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 176
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_07_stop_bandwidth
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 178
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_07_magnification
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 180
+  isHidden: true
+- name: Z_Power_in_Band_08_band_order
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 181
+  isHidden: true
+- name: Z_Power_in_Band_08_start_order
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 182
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_08_stop_bandwidth
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 184
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_08_magnification
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 186
+  isHidden: true
+- name: Z_Power_in_Band_09_band_order
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 187
+  isHidden: true
+- name: Z_Power_in_Band_09_start_order
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 188
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_09_stop_bandwidth
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 190
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_09_magnification
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 192
+  isHidden: true
+- name: Z_Power_in_Band_10_band_order
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 193
+  isHidden: true
+- name: Z_Power_in_Band_10_start_order
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 194
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_10_stop_bandwidth
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 196
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_10_magnification
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 198
+  isHidden: true
+- name: Hardware_Trigger
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 199
+  isHidden: true
+- name: Instrument_Type
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 200
+  isHidden: true
+- name: Enable_Disable
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 201
+  isHidden: true
+- name: Gear_Ratio
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 202
+  isHidden: true
+- name: Van_Pass_Write
+  description: ''
+  properties:
+    valueType: Uint8
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 203
+  isHidden: true
+- name: X_Overall_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 204
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: X_Overall_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 206
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Overall_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 208
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Overall_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 210
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Overall_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 212
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Overall_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 214
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: X_Peak_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 216
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: X_Peak_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 218
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Peak_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 220
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Peak_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 222
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Peak_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 224
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Peak_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 226
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: X_Peak_to_Peak_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 228
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: X_Peak_to_Peak_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 230
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Peak_to_Peak_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 232
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Peak_to_Peak_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 234
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Peak_to_Peak_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 236
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Peak_to_Peak_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 238
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: X_Crest_Factor_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 240
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: X_Crest_Factor_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 242
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Crest_Factor_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 244
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Crest_Factor_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 246
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Crest_Factor_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 248
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Crest_Factor_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 250
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Power_in_Band_01_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 252
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Power_in_Band_01_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 254
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Power_in_Band_02_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 256
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Power_in_Band_02_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 258
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Power_in_Band_03_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 260
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Power_in_Band_03_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 262
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Power_in_Band_04_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 264
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Power_in_Band_04_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 266
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Power_in_Band_05_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 268
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Power_in_Band_05_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 270
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Power_in_Band_06_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 272
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Power_in_Band_06_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 274
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Power_in_Band_07_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 276
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Power_in_Band_07_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 278
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Power_in_Band_08_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 280
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Power_in_Band_08_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 282
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Power_in_Band_09_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 284
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Power_in_Band_09_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 286
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Power_in_Band_10_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 288
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Power_in_Band_10_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 290
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_01_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 292
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_01_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 294
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_02_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 296
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_02_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 298
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_03_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 300
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_03_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 302
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_04_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 304
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_04_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 306
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_05_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 308
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_05_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 310
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_06_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 312
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_06_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 314
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_07_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 316
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_07_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 318
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_08_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 320
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_08_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 322
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_09_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 324
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_09_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 326
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_10_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 328
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Y_Power_in_Band_10_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 330
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_01_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 332
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_01_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 334
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_02_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 336
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_02_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 338
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_03_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 340
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_03_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 342
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_04_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 344
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_04_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 346
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_05_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 348
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_05_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 350
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_06_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 352
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_06_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 354
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_07_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 356
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_07_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 358
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_08_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 360
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_08_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 362
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_09_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 364
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_09_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 366
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_10_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 368
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Z_Power_in_Band_10_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 370
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Bearing_Defect_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 372
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Bearing_Defect_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 374
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Looseness_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 376
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Looseness_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 378
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Misalignment_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 380
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Misalignment_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 382
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Unbalance_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 384
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Unbalance_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 386
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Gear_mesh_Defect_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 388
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Gear_mesh_Defect_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 390
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Vane_Pass_Defect_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 392
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Vane_Pass_Defect_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 394
+    rawType: UINT32
+    scale: 0.001
+  isHidden: true
+- name: Temperature_Warning
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 396
+    rawType: INT32
+    scale: 0.001
+  isHidden: true
+- name: Temperature_Alarm
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: W
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 398
+    rawType: INT32
+    scale: 0.001
+  isHidden: true
+deviceCommands:
+- name: _get_all_data
+  readWrite: R
+  resourceOperations:
+  - deviceResource: DataOutput_Count_L
+  - deviceResource: DataOutput_Count_H
+  - deviceResource: Device_ID
+  - deviceResource: RPM
+  - deviceResource: X_Overall
+  - deviceResource: Y_Overall
+  - deviceResource: Z_Overall
+  - deviceResource: X_Peak
+  - deviceResource: Y_Peak
+  - deviceResource: Z_Peak
+  - deviceResource: X_Peak_to_Peak
+  - deviceResource: Y_Peak_to_Peak
+  - deviceResource: Z_Peak_to_Peak
+  - deviceResource: X_Crest_Factor
+  - deviceResource: Y_Crest_Factor
+  - deviceResource: Z_Crest_Factor
+  - deviceResource: X_Power_in_Band_01
+  - deviceResource: X_Power_in_Band_02
+  - deviceResource: X_Power_in_Band_03
+  - deviceResource: X_Power_in_Band_04
+  - deviceResource: X_Power_in_Band_05
+  - deviceResource: X_Power_in_Band_06
+  - deviceResource: X_Power_in_Band_07
+  - deviceResource: X_Power_in_Band_08
+  - deviceResource: X_Power_in_Band_09
+  - deviceResource: X_Power_in_Band_10
+  - deviceResource: Y_Power_in_Band_01
+  - deviceResource: Y_Power_in_Band_02
+  - deviceResource: Y_Power_in_Band_03
+  - deviceResource: Y_Power_in_Band_04
+  - deviceResource: Y_Power_in_Band_05
+  - deviceResource: Y_Power_in_Band_06
+  - deviceResource: Y_Power_in_Band_07
+  - deviceResource: Y_Power_in_Band_08
+  - deviceResource: Y_Power_in_Band_09
+  - deviceResource: Y_Power_in_Band_10
+  - deviceResource: Z_Power_in_Band_01
+  - deviceResource: Z_Power_in_Band_02
+  - deviceResource: Z_Power_in_Band_03
+  - deviceResource: Z_Power_in_Band_04
+  - deviceResource: Z_Power_in_Band_05
+  - deviceResource: Z_Power_in_Band_06
+  - deviceResource: Z_Power_in_Band_07
+  - deviceResource: Z_Power_in_Band_08
+  - deviceResource: Z_Power_in_Band_09
+  - deviceResource: Z_Power_in_Band_10
+  - deviceResource: Bearing
+  - deviceResource: Losseness
+  - deviceResource: Misalignment
+  - deviceResource: Unbalance
+  - deviceResource: Gear_mesh
+  - deviceResource: Van_Pass
+  - deviceResource: Bearing_percentage
+  - deviceResource: Losseness_percentage
+  - deviceResource: Misalignment_percentage
+  - deviceResource: Unbalance_percentage
+  - deviceResource: Gear_mesh_percentage
+  - deviceResource: Van_Pass_percentage
+  - deviceResource: Temperature_C
+  isHidden: false
+- name: _get_all_QC_data
+  readWrite: R
+  resourceOperations:
+  - deviceResource: X_Overall_QC_code
+  - deviceResource: Y_Overall_QC_code
+  - deviceResource: Z_Overall_QC_code
+  - deviceResource: X_Peak_QC_code
+  - deviceResource: Y_Peak_QC_code
+  - deviceResource: Z_Peak_QC_code
+  - deviceResource: X_Peak_to_Peak_QC_code
+  - deviceResource: Y_Peak_to_Peak_QC_code
+  - deviceResource: Z_Peak_to_Peak_QC_code
+  - deviceResource: X_Crest_Factor_QC_code
+  - deviceResource: Y_Crest_Factor_QC_code
+  - deviceResource: Z_Crest_Factor_QC_code
+  - deviceResource: X_Power_in_Band_01_QC_code
+  - deviceResource: X_Power_in_Band_02_QC_code
+  - deviceResource: X_Power_in_Band_03_QC_code
+  - deviceResource: X_Power_in_Band_04_QC_code
+  - deviceResource: X_Power_in_Band_05_QC_code
+  - deviceResource: X_Power_in_Band_06_QC_code
+  - deviceResource: X_Power_in_Band_07_QC_code
+  - deviceResource: X_Power_in_Band_08_QC_code
+  - deviceResource: X_Power_in_Band_09_QC_code
+  - deviceResource: X_Power_in_Band_10_QC_code
+  - deviceResource: Y_Power_in_Band_01_QC_code
+  - deviceResource: Y_Power_in_Band_02_QC_code
+  - deviceResource: Y_Power_in_Band_03_QC_code
+  - deviceResource: Y_Power_in_Band_04_QC_code
+  - deviceResource: Y_Power_in_Band_05_QC_code
+  - deviceResource: Y_Power_in_Band_06_QC_code
+  - deviceResource: Y_Power_in_Band_07_QC_code
+  - deviceResource: Y_Power_in_Band_08_QC_code
+  - deviceResource: Y_Power_in_Band_09_QC_code
+  - deviceResource: Y_Power_in_Band_10_QC_code
+  - deviceResource: Z_Power_in_Band_01_QC_code
+  - deviceResource: Z_Power_in_Band_02_QC_code
+  - deviceResource: Z_Power_in_Band_03_QC_code
+  - deviceResource: Z_Power_in_Band_04_QC_code
+  - deviceResource: Z_Power_in_Band_05_QC_code
+  - deviceResource: Z_Power_in_Band_06_QC_code
+  - deviceResource: Z_Power_in_Band_07_QC_code
+  - deviceResource: Z_Power_in_Band_08_QC_code
+  - deviceResource: Z_Power_in_Band_09_QC_code
+  - deviceResource: Z_Power_in_Band_10_QC_code
+  - deviceResource: Bearing_QC_code
+  - deviceResource: Losseness_QC_code
+  - deviceResource: Misalignment_QC_code
+  - deviceResource: Unbalance_QC_code
+  - deviceResource: Gear_mesh_QC_code
+  - deviceResource: Van_Pass_QC_code
+  - deviceResource: Temperature_QC_code
+  isHidden: false
+- name: _set_registers
+  readWrite: W
+  resourceOperations:
+  - deviceResource: User_X_Axis_Sensitivity
+  - deviceResource: User_Y_Axis_Sensitivity
+  - deviceResource: User_Z_Axis_Sensitivity
+  - deviceResource: Trigger_Level
+  - deviceResource: Delay_Time
+  - deviceResource: Analyze
+  - deviceResource: RPM_Start
+  - deviceResource: RPM_End
+  - deviceResource: X_Power_in_Band_01_band_order
+  - deviceResource: X_Power_in_Band_01_start_order
+  - deviceResource: X_Power_in_Band_01_stop_bandwidth
+  - deviceResource: X_Power_in_Band_01_magnification
+  - deviceResource: X_Power_in_Band_02_band_order
+  - deviceResource: X_Power_in_Band_02_start_order
+  - deviceResource: X_Power_in_Band_02_stop_bandwidth
+  - deviceResource: X_Power_in_Band_02_magnification
+  - deviceResource: X_Power_in_Band_03_band_order
+  - deviceResource: X_Power_in_Band_03_start_order
+  - deviceResource: X_Power_in_Band_03_stop_bandwidth
+  - deviceResource: X_Power_in_Band_03_magnification
+  - deviceResource: X_Power_in_Band_04_band_order
+  - deviceResource: X_Power_in_Band_04_start_order
+  - deviceResource: X_Power_in_Band_04_stop_bandwidth
+  - deviceResource: X_Power_in_Band_04_magnification
+  - deviceResource: X_Power_in_Band_05_band_order
+  - deviceResource: X_Power_in_Band_05_start_order
+  - deviceResource: X_Power_in_Band_05_stop_bandwidth
+  - deviceResource: X_Power_in_Band_05_magnification
+  - deviceResource: X_Power_in_Band_06_band_order
+  - deviceResource: X_Power_in_Band_06_start_order
+  - deviceResource: X_Power_in_Band_06_stop_bandwidth
+  - deviceResource: X_Power_in_Band_06_magnification
+  - deviceResource: X_Power_in_Band_07_band_order
+  - deviceResource: X_Power_in_Band_07_start_order
+  - deviceResource: X_Power_in_Band_07_stop_bandwidth
+  - deviceResource: X_Power_in_Band_07_magnification
+  - deviceResource: X_Power_in_Band_08_band_order
+  - deviceResource: X_Power_in_Band_08_start_order
+  - deviceResource: X_Power_in_Band_08_stop_bandwidth
+  - deviceResource: X_Power_in_Band_08_magnification
+  - deviceResource: X_Power_in_Band_09_band_order
+  - deviceResource: X_Power_in_Band_09_start_order
+  - deviceResource: X_Power_in_Band_09_stop_bandwidth
+  - deviceResource: X_Power_in_Band_09_magnification
+  - deviceResource: X_Power_in_Band_10_band_order
+  - deviceResource: X_Power_in_Band_10_start_order
+  - deviceResource: X_Power_in_Band_10_stop_bandwidth
+  - deviceResource: X_Power_in_Band_10_magnification
+  - deviceResource: Y_Power_in_Band_01_band_order
+  - deviceResource: Y_Power_in_Band_01_start_order
+  - deviceResource: Y_Power_in_Band_01_stop_bandwidth
+  - deviceResource: Y_Power_in_Band_01_magnification
+  - deviceResource: Y_Power_in_Band_02_band_order
+  - deviceResource: Y_Power_in_Band_02_start_order
+  - deviceResource: Y_Power_in_Band_02_stop_bandwidth
+  - deviceResource: Y_Power_in_Band_02_magnification
+  - deviceResource: Y_Power_in_Band_03_band_order
+  - deviceResource: Y_Power_in_Band_03_start_order
+  - deviceResource: Y_Power_in_Band_03_stop_bandwidth
+  - deviceResource: Y_Power_in_Band_03_magnification
+  - deviceResource: Y_Power_in_Band_04_band_order
+  - deviceResource: Y_Power_in_Band_04_start_order
+  - deviceResource: Y_Power_in_Band_04_stop_bandwidth
+  - deviceResource: Y_Power_in_Band_04_magnification
+  - deviceResource: Y_Power_in_Band_05_band_order
+  - deviceResource: Y_Power_in_Band_05_start_order
+  - deviceResource: Y_Power_in_Band_05_stop_bandwidth
+  - deviceResource: Y_Power_in_Band_05_magnification
+  - deviceResource: Y_Power_in_Band_06_band_order
+  - deviceResource: Y_Power_in_Band_06_start_order
+  - deviceResource: Y_Power_in_Band_06_stop_bandwidth
+  - deviceResource: Y_Power_in_Band_06_magnification
+  - deviceResource: Y_Power_in_Band_07_band_order
+  - deviceResource: Y_Power_in_Band_07_start_order
+  - deviceResource: Y_Power_in_Band_07_stop_bandwidth
+  - deviceResource: Y_Power_in_Band_07_magnification
+  - deviceResource: Y_Power_in_Band_08_band_order
+  - deviceResource: Y_Power_in_Band_08_start_order
+  - deviceResource: Y_Power_in_Band_08_stop_bandwidth
+  - deviceResource: Y_Power_in_Band_08_magnification
+  - deviceResource: Y_Power_in_Band_09_band_order
+  - deviceResource: Y_Power_in_Band_09_start_order
+  - deviceResource: Y_Power_in_Band_09_stop_bandwidth
+  - deviceResource: Y_Power_in_Band_09_magnification
+  - deviceResource: Y_Power_in_Band_10_band_order
+  - deviceResource: Y_Power_in_Band_10_start_order
+  - deviceResource: Y_Power_in_Band_10_stop_bandwidth
+  - deviceResource: Y_Power_in_Band_10_magnification
+  - deviceResource: Z_Power_in_Band_01_band_order
+  - deviceResource: Z_Power_in_Band_01_start_order
+  - deviceResource: Z_Power_in_Band_01_stop_bandwidth
+  - deviceResource: Z_Power_in_Band_01_magnification
+  - deviceResource: Z_Power_in_Band_02_band_order
+  - deviceResource: Z_Power_in_Band_02_start_order
+  - deviceResource: Z_Power_in_Band_02_stop_bandwidth
+  - deviceResource: Z_Power_in_Band_02_magnification
+  - deviceResource: Z_Power_in_Band_03_band_order
+  - deviceResource: Z_Power_in_Band_03_start_order
+  - deviceResource: Z_Power_in_Band_03_stop_bandwidth
+  - deviceResource: Z_Power_in_Band_03_magnification
+  - deviceResource: Z_Power_in_Band_04_band_order
+  - deviceResource: Z_Power_in_Band_04_start_order
+  - deviceResource: Z_Power_in_Band_04_stop_bandwidth
+  - deviceResource: Z_Power_in_Band_04_magnification
+  - deviceResource: Z_Power_in_Band_05_band_order
+  - deviceResource: Z_Power_in_Band_05_start_order
+  - deviceResource: Z_Power_in_Band_05_stop_bandwidth
+  - deviceResource: Z_Power_in_Band_05_magnification
+  - deviceResource: Z_Power_in_Band_06_band_order
+  - deviceResource: Z_Power_in_Band_06_start_order
+  - deviceResource: Z_Power_in_Band_06_stop_bandwidth
+  - deviceResource: Z_Power_in_Band_06_magnification
+  - deviceResource: Z_Power_in_Band_07_band_order
+  - deviceResource: Z_Power_in_Band_07_start_order
+  - deviceResource: Z_Power_in_Band_07_stop_bandwidth
+  - deviceResource: Z_Power_in_Band_07_magnification
+  - deviceResource: Z_Power_in_Band_08_band_order
+  - deviceResource: Z_Power_in_Band_08_start_order
+  - deviceResource: Z_Power_in_Band_08_stop_bandwidth
+  - deviceResource: Z_Power_in_Band_08_magnification
+  - deviceResource: Z_Power_in_Band_09_band_order
+  - deviceResource: Z_Power_in_Band_09_start_order
+  - deviceResource: Z_Power_in_Band_09_stop_bandwidth
+  - deviceResource: Z_Power_in_Band_09_magnification
+  - deviceResource: Z_Power_in_Band_10_band_order
+  - deviceResource: Z_Power_in_Band_10_start_order
+  - deviceResource: Z_Power_in_Band_10_stop_bandwidth
+  - deviceResource: Z_Power_in_Band_10_magnification
+  - deviceResource: Hardware_Trigger
+  - deviceResource: Instrument_Type
+  - deviceResource: Enable_Disable
+  - deviceResource: Gear_Ratio
+  - deviceResource: Van_Pass_Write
+  - deviceResource: X_Overall_Warning
+  - deviceResource: X_Overall_Alarm
+  - deviceResource: Y_Overall_Warning
+  - deviceResource: Y_Overall_Alarm
+  - deviceResource: Z_Overall_Warning
+  - deviceResource: Z_Overall_Alarm
+  - deviceResource: X_Peak_Warning
+  - deviceResource: X_Peak_Alarm
+  - deviceResource: Y_Peak_Warning
+  - deviceResource: Y_Peak_Alarm
+  - deviceResource: Z_Peak_Warning
+  - deviceResource: Z_Peak_Alarm
+  - deviceResource: X_Peak_to_Peak_Warning
+  - deviceResource: X_Peak_to_Peak_Alarm
+  - deviceResource: Y_Peak_to_Peak_Warning
+  - deviceResource: Y_Peak_to_Peak_Alarm
+  - deviceResource: Z_Peak_to_Peak_Warning
+  - deviceResource: Z_Peak_to_Peak_Alarm
+  - deviceResource: X_Crest_Factor_Warning
+  - deviceResource: X_Crest_Factor_Alarm
+  - deviceResource: Y_Crest_Factor_Warning
+  - deviceResource: Y_Crest_Factor_Alarm
+  - deviceResource: Z_Crest_Factor_Warning
+  - deviceResource: Z_Crest_Factor_Alarm
+  - deviceResource: Power_in_Band_01_Warning
+  - deviceResource: Power_in_Band_01_Alarm
+  - deviceResource: Power_in_Band_02_Warning
+  - deviceResource: Power_in_Band_02_Alarm
+  - deviceResource: Power_in_Band_03_Warning
+  - deviceResource: Power_in_Band_03_Alarm
+  - deviceResource: Power_in_Band_04_Warning
+  - deviceResource: Power_in_Band_04_Alarm
+  - deviceResource: Power_in_Band_05_Warning
+  - deviceResource: Power_in_Band_05_Alarm
+  - deviceResource: Power_in_Band_06_Warning
+  - deviceResource: Power_in_Band_06_Alarm
+  - deviceResource: Power_in_Band_07_Warning
+  - deviceResource: Power_in_Band_07_Alarm
+  - deviceResource: Power_in_Band_08_Warning
+  - deviceResource: Power_in_Band_08_Alarm
+  - deviceResource: Power_in_Band_09_Warning
+  - deviceResource: Power_in_Band_09_Alarm
+  - deviceResource: Power_in_Band_10_Warning
+  - deviceResource: Power_in_Band_10_Alarm
+  - deviceResource: Y_Power_in_Band_01_Warning
+  - deviceResource: Y_Power_in_Band_01_Alarm
+  - deviceResource: Y_Power_in_Band_02_Warning
+  - deviceResource: Y_Power_in_Band_02_Alarm
+  - deviceResource: Y_Power_in_Band_03_Warning
+  - deviceResource: Y_Power_in_Band_03_Alarm
+  - deviceResource: Y_Power_in_Band_04_Warning
+  - deviceResource: Y_Power_in_Band_04_Alarm
+  - deviceResource: Y_Power_in_Band_05_Warning
+  - deviceResource: Y_Power_in_Band_05_Alarm
+  - deviceResource: Y_Power_in_Band_06_Warning
+  - deviceResource: Y_Power_in_Band_06_Alarm
+  - deviceResource: Y_Power_in_Band_07_Warning
+  - deviceResource: Y_Power_in_Band_07_Alarm
+  - deviceResource: Y_Power_in_Band_08_Warning
+  - deviceResource: Y_Power_in_Band_08_Alarm
+  - deviceResource: Y_Power_in_Band_09_Warning
+  - deviceResource: Y_Power_in_Band_09_Alarm
+  - deviceResource: Y_Power_in_Band_10_Warning
+  - deviceResource: Y_Power_in_Band_10_Alarm
+  - deviceResource: Z_Power_in_Band_01_Warning
+  - deviceResource: Z_Power_in_Band_01_Alarm
+  - deviceResource: Z_Power_in_Band_02_Warning
+  - deviceResource: Z_Power_in_Band_02_Alarm
+  - deviceResource: Z_Power_in_Band_03_Warning
+  - deviceResource: Z_Power_in_Band_03_Alarm
+  - deviceResource: Z_Power_in_Band_04_Warning
+  - deviceResource: Z_Power_in_Band_04_Alarm
+  - deviceResource: Z_Power_in_Band_05_Warning
+  - deviceResource: Z_Power_in_Band_05_Alarm
+  - deviceResource: Z_Power_in_Band_06_Warning
+  - deviceResource: Z_Power_in_Band_06_Alarm
+  - deviceResource: Z_Power_in_Band_07_Warning
+  - deviceResource: Z_Power_in_Band_07_Alarm
+  - deviceResource: Z_Power_in_Band_08_Warning
+  - deviceResource: Z_Power_in_Band_08_Alarm
+  - deviceResource: Z_Power_in_Band_09_Warning
+  - deviceResource: Z_Power_in_Band_09_Alarm
+  - deviceResource: Z_Power_in_Band_10_Warning
+  - deviceResource: Z_Power_in_Band_10_Alarm
+  - deviceResource: Bearing_Defect_Warning
+  - deviceResource: Bearing_Defect_Alarm
+  - deviceResource: Looseness_Warning
+  - deviceResource: Looseness_Alarm
+  - deviceResource: Misalignment_Warning
+  - deviceResource: Misalignment_Alarm
+  - deviceResource: Unbalance_Warning
+  - deviceResource: Unbalance_Alarm
+  - deviceResource: Gear_mesh_Defect_Warning
+  - deviceResource: Gear_mesh_Defect_Alarm
+  - deviceResource: Vane_Pass_Defect_Warning
+  - deviceResource: Vane_Pass_Defect_Alarm
+  - deviceResource: Temperature_Warning
+  - deviceResource: Temperature_Alarm
+  isHidden: false

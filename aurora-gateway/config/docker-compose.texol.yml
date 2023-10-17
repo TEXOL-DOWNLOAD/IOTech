@@ -1,0 +1,68 @@
+version: "3.7"
+
+volumes:
+  texol-mosquitto-log:
+  texol-mosquitto-data:
+
+x-logging: &default-logging
+  driver: "json-file"
+  options:
+    max-size: "10mb"
+    max-file: "5"
+
+services:
+  influxdb:
+    ports:
+    - "8086:8086"
+    environment:
+      DOCKER_INFLUXDB_INIT_USERNAME: admin
+      DOCKER_INFLUXDB_INIT_PASSWORD: admin-password
+      DOCKER_INFLUXDB_INIT_ORG: texol
+      DOCKER_INFLUXDB_INIT_BUCKET: bucket
+      DOCKER_INFLUXDB_INIT_ADMIN_TOKEN: texol-password
+      DOCKER_INFLUXDB_INIT_RETENTION: 1w
+
+  grafana:
+    volumes:
+      - /usr/share/texol/picture/:/usr/share/grafana/public/img/texol
+
+  device-modbus:
+    user: 2002:dialout
+    devices:
+      #-  /dev/ttyUSB0
+      - /dev/ttyADV1  # COM1
+      - /dev/ttyADV2  # COM2
+      - /dev/ttyADV3  # COM3
+      - /dev/ttyADV4  # COM4
+    environment:
+      LOGGING_LOGLEVEL: INFO
+      SCHEDULES_THREAD_POOL_SIZE: 20
+      DEVICE_DOWN_TIMEOUT: 10
+      ALLOWED_FAILS: 1
+      DISCARD_UNCHANGED_READINGS: false
+      XRT_MODBUS_DEFAULT_TIMEOUT:  50
+      XRT_MODBUS_DISABLE_REQUEST_RETRIES: true
+
+  device-mqtt:
+    environment:
+      MQTTBROKERINFO_HOST: texol-broker
+      MQTTBROKERINFO_PORT: 1883
+
+  texol-broker:
+    command: "/usr/sbin/mosquitto -c /mosquitto-no-auth.conf"
+    image: eclipse-mosquitto:2.0.15
+    container_name: texol-broker
+    hostname: texol-broker
+    networks:
+      - edgex-network
+    ports:
+      - "1884:1883"
+      - "1885:1883"
+      - "1886:1883"
+    restart: always
+    read_only: true
+    user: 2002:2001
+    volumes:
+      - texol-mosquitto-log:/mosquitto/log
+      - texol-mosquitto-data:/mosquitto/data
+    logging: *default-logging
