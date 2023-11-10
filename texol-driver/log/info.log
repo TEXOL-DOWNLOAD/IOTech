@@ -1,0 +1,22 @@
+2023/11/10 11:39:05 log.go:24: Software Start
+2023/11/10 11:39:05 log.go:24: Version: 1.0.0
+2023/11/10 11:39:05 log.go:24: Gateway IP: 192.168.10.1
+2023/11/10 11:39:05 log.go:24: {texol-ble-driver 192.168.0.21 1884    0x644f00 0x641660}
+2023/11/10 11:39:05 log.go:29: MQTT Connected: texol-ble-driver
+2023/11/10 11:39:05 log.go:29: Subscribed to topic: /SENSOR/ALIVE
+2023/11/10 11:39:05 log.go:29: Subscribed to topic: /CLIENT
+2023/11/10 11:39:05 log.go:29: Subscribed to topic: /SENSOR/DATA
+2023/11/10 11:39:17 log.go:24: Drvier shutdown ...
+2023/11/10 11:39:17 log.go:29: MQTT Close: texol-ble-driver
+2023/11/10 11:39:18 log.go:24: Software Close
+2023/11/10 11:39:37 log.go:24: Software Start
+2023/11/10 11:39:37 log.go:24: Version: 1.0.0
+2023/11/10 11:39:37 log.go:24: Gateway IP: 192.168.10.1
+2023/11/10 11:39:37 log.go:24: {texol-ble-driver 192.168.0.21 1884    0x644f00 0x641660}
+2023/11/10 11:39:37 log.go:29: MQTT Connected: texol-ble-driver
+2023/11/10 11:39:37 log.go:29: Subscribed to topic: /SENSOR/ALIVE
+2023/11/10 11:39:37 log.go:29: Subscribed to topic: /CLIENT
+2023/11/10 11:39:37 log.go:29: Subscribed to topic: /SENSOR/DATA
+2023/11/10 11:49:56 log.go:24: Drvier shutdown ...
+2023/11/10 11:49:56 log.go:29: MQTT Close: texol-ble-driver
+2023/11/10 11:49:57 log.go:24: Software Close
