@@ -23,8 +23,8 @@ const (
 var EventChan = make(chan eventPro)
 var mqttConfig = mqttCPro{
 	ClientID:          "texol-ble-driver",
-	IP:                "192.168.0.21", //192.168.0.21 //test.mosquitto.org
-	Port:              "1884",
+	IP:                "texol-broker", //192.168.0.21 //test.mosquitto.org
+	Port:              "1883",
 	Username:          "",
 	Password:          "",
 	CAcertificateFile: "",
@@ -35,7 +35,7 @@ func init() {
 	logfile.Println("Version: " + version)
 
 	//Read Gateway IP File
-	GatewayIP = readIPfile("GatewayIP.txt")
+	GatewayIP = readIPfile("/texol/GatewayIP.txt")
 	logfile.Println("Gateway IP: " + GatewayIP)
 }
 

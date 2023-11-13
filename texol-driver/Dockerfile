@@ -15,7 +15,7 @@ RUN CGO_ENABLED=0 GOOS=linux go build -o /texol-ble-driver
 
 FROM alpine:3.18
 
-COPY --from=builder /app/GatewayIP.txt /GatewayIP.txt
+# COPY --from=builder /app/GatewayIP.txt /GatewayIP.txt
 COPY --from=builder /texol-ble-driver /
 
 # To bind to a TCP port, runtime parameters must be supplied to the docker command.

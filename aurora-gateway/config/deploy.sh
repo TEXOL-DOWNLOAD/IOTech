@@ -43,8 +43,13 @@ register_appservice() {
 }
 
 
+## Copy resource to file system
+sudo mkdir -p /usr/share/texol
+sudo cp -rf picture/* /usr/share/texol/picture
+sudo cp -rf GatewayIP.txt /usr/share/texol
+
 echo "Launching Edge Xpert with the required microservices..."
-edgexpert up xpert-manager sys-mgmt device-modbus influxdb grafana
+edgexpert up xpert-manager sys-mgmt device-modbus influxdb grafana texol-broker texol-ble-driver
 
 # Sleep
 sleep 10s
@@ -63,10 +68,6 @@ echo $GUI_ACCESS_TOKEN
 POST_DATA='{"name":"influxdb-exporter","logLevel":"INFO","destination":"InfluxDB","influxDBSyncWrite":{"influxDBServerURL":"http://influxdb:8086","influxDBOrganization":"texol","influxDBBucket":"bucket","token":"texol-password","influxDBMeasurement":"readings","fieldKeyPattern":"{resourceName}","influxDBValueType":"float","influxDBPrecision":"us","authMode":"token","secretPath":"influxdb","skipVerify":"true","persistOnError":"false","storeEventTags":"false","storeReadingTags":"false"}}'
 register_appservice "$API_ENDPOINT/appSvcConf" "$GUI_ACCESS_TOKEN" "$POST_DATA"
 
-
-## Copy sensor picture to file system
-sudo mkdir -p /usr/share/texol
-sudo cp -rf picture/* /usr/share/texol/picture
 
 echo "Finish!"
 exit 0
