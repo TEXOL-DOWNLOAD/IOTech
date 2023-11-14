@@ -172,7 +172,7 @@ func sensor_dataandalive(dataoralive string, payload string) (publishPro, bool) 
 	switch dataoralive {
 	case "Alive":
 		{
-			topic = "/heartbeat"
+			topic = "/HEARTBEAT"
 			if sensorAlive(mainboard, &info) {
 				return pub_payload, true
 			}
@@ -187,7 +187,7 @@ func sensor_dataandalive(dataoralive string, payload string) (publishPro, bool) 
 	}
 
 	pub_payload = publishPro{
-		Topic:   fmt.Sprintf("/texol/%s/%s%s", info.ModuleName, info.SensorID, topic),
+		Topic:   fmt.Sprintf("/TEXOL/%s/%s%s", info.ModuleName, info.SensorID, topic),
 		Payload: toJSON(info),
 	}
 

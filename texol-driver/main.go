@@ -11,7 +11,7 @@ import (
 	"github.com/texol/texol-ble-driver/logfile"
 )
 
-var version = "1.0.0"
+var version = "1.1.0"
 var GatewayIP string
 
 const (
