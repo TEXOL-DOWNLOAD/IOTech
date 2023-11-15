@@ -1,0 +1,405 @@
+apiVersion: v2
+name: Texol_211HM1-B1_v1_1_0
+manufacturer: Texol
+description: BLE Vibration Sensor
+model: 211HM1-B1_v1_1_0
+labels:
+- MQTT_BLE
+deviceResources:
+- name: RPM
+  description: ''
+  properties:
+    valueType: Uint16
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: Feature.RPM
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Z_Overall
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: Feature.OA
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Z_Peak
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: Feature.Peak
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Z_Peak_to_Peak
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: Feature.PtoP
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Z_Crest_Factor
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: Feature.CF
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Z_Power_in_Band_01
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: Feature.PIB01
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Z_Power_in_Band_02
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: Feature.PIB02
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Z_Power_in_Band_03
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: Feature.PIB03
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Z_Power_in_Band_04
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: Feature.PIB04
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Z_Power_in_Band_05
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: Feature.PIB05
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Z_Power_in_Band_06
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: Feature.PIB06
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Z_Power_in_Band_07
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: Feature.PIB07
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Z_Power_in_Band_08
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: Feature.PIB08
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Z_Power_in_Band_09
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: Feature.PIB09
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Z_Power_in_Band_10
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: Feature.PIB10
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Bearing
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: Feature.Bearing
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Losseness
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: Feature.Losseness
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Misalignment
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: Feature.Misalignment
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Unbalance
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: Feature.Unbalance
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Gear_mesh
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: Feature.Gear_mesh
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Van_Pass
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: Feature.Van_Pass
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Bearing_percentage
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: Feature.Bearing_percentage
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Losseness_percentage
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: Feature.Losseness_percentage
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Misalignment_percentage
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: Feature.Misalignment_percentage
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Unbalance_percentage
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: Feature.Unbalance_percentage
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Gear_mesh_percentage
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: Feature.Gear_mesh_percentage
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Van_Pass_percentage
+  description: ''
+  properties:
+    valueType: Float32
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: Feature.Van_Pass_percentage
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Sensor_Heartbeat
+  description: ''
+  properties:
+    valueType: String
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: Feature
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}/HEARTBEAT
+  isHidden: false
+- name: Bridge_UUID
+  description: ''
+  properties:
+    valueType: String
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: BridgeUUID
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Channel
+  description: ''
+  properties:
+    valueType: String
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: Channel
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Pipe
+  description: ''
+  properties:
+    valueType: String
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: Pipe
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: BLE_UUID
+  description: ''
+  properties:
+    valueType: String
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: BLEUUID
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Sensor_ID
+  description: ''
+  properties:
+    valueType: String
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: SensorID
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: Module_Name
+  description: ''
+  properties:
+    valueType: String
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: ModuleName
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: BLE_FW_Version
+  description: ''
+  properties:
+    valueType: String
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: BLEFWVersion
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+- name: RSSI
+  description: ''
+  properties:
+    valueType: String
+    readWrite: R
+  attributes:
+    qos: '0'
+    msgFormat: json
+    jsonPath: RSSI
+    subTopic: /TEXOL/211HM1-B1/${topicReplacement}
+  isHidden: false
+deviceCommands: []
