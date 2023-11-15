@@ -3503,7 +3503,7 @@ deviceCommands:
   resourceOperations:
   - deviceResource: DataOutput_Count_L
   - deviceResource: DataOutput_Count_H
-  - deviceResource: Device_ID
+  - deviceResource: Sensor_ID
   - deviceResource: RPM
   - deviceResource: X_Overall
   - deviceResource: Y_Overall
