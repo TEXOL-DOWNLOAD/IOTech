@@ -1,8 +1,8 @@
 apiVersion: v2
-name: Texol_213MM2_v1_72
+name: Texol_213MM2-R1_v1_72
 manufacturer: Texol
 description: Vibration Sensor Profile
-model: 213MM2_v1_72
+model: 213MM2-R1_v1_72
 labels:
 - ModbusRTU
 deviceResources:
@@ -24,7 +24,7 @@ deviceResources:
     primaryTable: INPUT_REGISTERS
     startingAddress: 2
   isHidden: false
-- name: Device_ID
+- name: Sensor_ID
   description: ''
   properties:
     valueType: String
