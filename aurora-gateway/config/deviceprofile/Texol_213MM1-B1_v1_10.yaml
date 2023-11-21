@@ -20,7 +20,7 @@ deviceResources:
 - name: X_Overall
   description: ''
   properties:
-    valueType: Uint16
+    valueType: Float32
     readWrite: R
   attributes:
     qos: '0'
@@ -31,7 +31,7 @@ deviceResources:
 - name: Y_Overall
   description: ''
   properties:
-    valueType: Uint16
+    valueType: Float32
     readWrite: R
   attributes:
     qos: '0'
