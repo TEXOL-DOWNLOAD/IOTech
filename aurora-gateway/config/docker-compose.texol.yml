@@ -24,18 +24,18 @@ services:
 
   grafana:
     volumes:
-      - /usr/share/texol/picture/:/usr/share/grafana/public/img/texol
+      - /usr/share/texol/picture:/usr/share/grafana/public/img/texol
 
   device-modbus:
     user: 2002:dialout
-    # devices:
-      # - /dev/ttyADV1  # COM1
-      # - /dev/ttyADV2  # COM2
-      # - /dev/ttyADV3  # COM3
-      # - /dev/ttyADV4  # COM4
-      #-  /dev/ttyUSB0
+    devices:
+      - /dev/ttyADV1  # COM1
+      - /dev/ttyADV2  # COM2
+      - /dev/ttyADV3  # COM3
+      - /dev/ttyADV4  # COM4
     environment:
       LOGGING_LOGLEVEL: INFO
+      # DEVICE_MAXCMDOPS: 1000
       SCHEDULES_THREAD_POOL_SIZE: 20
       DEVICE_DOWN_TIMEOUT: 10
       ALLOWED_FAILS: 1
