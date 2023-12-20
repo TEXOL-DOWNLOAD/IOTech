@@ -182,39 +182,6 @@ deviceResources:
     jsonPath: Feature.Unbalance
     subTopic: /TEXOL/213MM1-B1/${topicReplacement}
   isHidden: false
-- name: Looseness_percentage
-  description: ''
-  properties:
-    valueType: Float32
-    readWrite: R
-  attributes:
-    qos: '0'
-    msgFormat: json
-    jsonPath: Feature.Looseness_percentage
-    subTopic: /TEXOL/213MM1-B1/${topicReplacement}
-  isHidden: false
-- name: Misalignment_percentage
-  description: ''
-  properties:
-    valueType: Float32
-    readWrite: R
-  attributes:
-    qos: '0'
-    msgFormat: json
-    jsonPath: Feature.Misalignment_percentage
-    subTopic: /TEXOL/213MM1-B1/${topicReplacement}
-  isHidden: false
-- name: Unbalance_percentage
-  description: ''
-  properties:
-    valueType: Float32
-    readWrite: R
-  attributes:
-    qos: '0'
-    msgFormat: json
-    jsonPath: Feature.Unbalance_percentage
-    subTopic: /TEXOL/213MM1-B1/${topicReplacement}
-  isHidden: false
 - name: Sensor_Heartbeat
   description: ''
   properties:
