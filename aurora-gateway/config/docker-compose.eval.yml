@@ -69,7 +69,7 @@ services:
     logging: *default-logging
 
   texol-ble-driver:
-    image: texol-ble-driver:0.1
+    image: texol-ble-driver:0.3
     container_name: texol-ble-driver
     hostname: texol-ble-driver
     networks:
