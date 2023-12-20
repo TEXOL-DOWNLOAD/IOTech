@@ -1,8 +1,8 @@
 apiVersion: v2
-name: Texol_213MM1-B1_v1_10
+name: Texol_213MM1-B1_v2_10
 manufacturer: Texol
-description: BLE Vibration Sensor
-model: 213MM1-B1_v1_10
+description: 3 Axis BLE Vibration Sensor Profile
+model: 213MM1-B1_v2_10
 labels:
 - MQTT_BLE
 deviceResources:
@@ -149,7 +149,7 @@ deviceResources:
     jsonPath: Feature.ZPIB03
     subTopic: /TEXOL/213MM1-B1/${topicReplacement}
   isHidden: false
-- name: Bearing
+- name: Looseness
   description: ''
   properties:
     valueType: Float32
@@ -157,7 +157,7 @@ deviceResources:
   attributes:
     qos: '0'
     msgFormat: json
-    jsonPath: Feature.Bearing
+    jsonPath: Feature.Looseness
     subTopic: /TEXOL/213MM1-B1/${topicReplacement}
   isHidden: false
 - name: Misalignment
@@ -182,7 +182,7 @@ deviceResources:
     jsonPath: Feature.Unbalance
     subTopic: /TEXOL/213MM1-B1/${topicReplacement}
   isHidden: false
-- name: Bearing_percentage
+- name: Looseness_percentage
   description: ''
   properties:
     valueType: Float32
@@ -190,7 +190,7 @@ deviceResources:
   attributes:
     qos: '0'
     msgFormat: json
-    jsonPath: Feature.Bearing_percentage
+    jsonPath: Feature.Looseness_percentage
     subTopic: /TEXOL/213MM1-B1/${topicReplacement}
   isHidden: false
 - name: Misalignment_percentage
