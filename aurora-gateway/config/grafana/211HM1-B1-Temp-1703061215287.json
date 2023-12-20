@@ -64,6 +64,7 @@
           "color": {
             "mode": "thresholds"
           },
+          "decimals": 3,
           "mappings": [],
           "thresholds": {
             "mode": "absolute",
@@ -192,6 +193,7 @@
           "color": {
             "mode": "thresholds"
           },
+          "decimals": 3,
           "mappings": [],
           "thresholds": {
             "mode": "absolute",
@@ -241,7 +243,7 @@
           "refId": "A"
         }
       ],
-      "title": "Bearing Energy [(mm/s,rms)^2]",
+      "title": "Bearing Defect",
       "type": "stat"
     },
     {
@@ -254,6 +256,7 @@
           "color": {
             "mode": "thresholds"
           },
+          "decimals": 3,
           "mappings": [],
           "thresholds": {
             "mode": "absolute",
@@ -316,6 +319,7 @@
           "color": {
             "mode": "thresholds"
           },
+          "decimals": 3,
           "mappings": [],
           "thresholds": {
             "mode": "absolute",
@@ -378,6 +382,7 @@
           "color": {
             "mode": "thresholds"
           },
+          "decimals": 3,
           "mappings": [],
           "thresholds": {
             "mode": "absolute",
@@ -423,11 +428,11 @@
             "type": "influxdb",
             "uid": "ijDJ0Ge4z"
           },
-          "query": "from(bucket: \"bucket\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"readings\")\n  |> filter(fn: (r) => r[\"deviceName\"] == \"Sensor01\")\n  |> filter(fn: (r) => r[\"_field\"] ==  \"Losseness\")\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\n  |> yield(name: \"last\")",
+          "query": "from(bucket: \"bucket\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"readings\")\n  |> filter(fn: (r) => r[\"deviceName\"] == \"Sensor01\")\n  |> filter(fn: (r) => r[\"_field\"] ==  \"Looseness\")\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\n  |> yield(name: \"last\")",
           "refId": "A"
         }
       ],
-      "title": "Losseness Energy [(mm/s,rms)^2]",
+      "title": "Looseness Energy [(mm/s,rms)^2]",
       "type": "stat"
     },
     {
@@ -440,6 +445,7 @@
           "color": {
             "mode": "thresholds"
           },
+          "decimals": 3,
           "mappings": [],
           "thresholds": {
             "mode": "absolute",
@@ -502,6 +508,7 @@
           "color": {
             "mode": "thresholds"
           },
+          "decimals": 3,
           "mappings": [],
           "thresholds": {
             "mode": "absolute",
@@ -552,69 +559,6 @@
         }
       ],
       "title": "Van_Pass Energy [(mm/s,rms)^2]",
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "influxdb",
-        "uid": "ijDJ0Ge4z"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          },
-          "unit": "percent"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 4,
-        "w": 4,
-        "x": 0,
-        "y": 12
-      },
-      "id": 13,
-      "options": {
-        "colorMode": "none",
-        "graphMode": "none",
-        "justifyMode": "center",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "auto"
-      },
-      "pluginVersion": "9.3.16",
-      "targets": [
-        {
-          "datasource": {
-            "type": "influxdb",
-            "uid": "ijDJ0Ge4z"
-          },
-          "query": "from(bucket: \"bucket\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"readings\")\n  |> filter(fn: (r) => r[\"deviceName\"] == \"Sensor01\")\n  |> filter(fn: (r) => r[\"_field\"] ==  \"Bearing_percentage\")\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\n  |> yield(name: \"last\")",
-          "refId": "A"
-        }
-      ],
-      "title": "Bearing Energy Percentage",
       "type": "stat"
     },
     {
@@ -799,11 +743,11 @@
             "type": "influxdb",
             "uid": "ijDJ0Ge4z"
           },
-          "query": "from(bucket: \"bucket\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"readings\")\n  |> filter(fn: (r) => r[\"deviceName\"] == \"Sensor01\")\n  |> filter(fn: (r) => r[\"_field\"] ==  \"Losseness_percentage\")\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\n  |> yield(name: \"last\")",
+          "query": "from(bucket: \"bucket\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"readings\")\n  |> filter(fn: (r) => r[\"deviceName\"] == \"Sensor01\")\n  |> filter(fn: (r) => r[\"_field\"] ==  \"Looseness_percentage\")\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\n  |> yield(name: \"last\")",
           "refId": "A"
         }
       ],
-      "title": "Losseness Energy Percentage",
+      "title": "Looseness Energy Percentage",
       "type": "stat"
     },
     {
@@ -1005,7 +949,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1094,7 +1039,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1130,7 +1076,7 @@
             "type": "influxdb",
             "uid": "ijDJ0Ge4z"
           },
-          "query": "from(bucket: \"Hourly_Bucket\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"readings\")\n  |> filter(fn: (r) => r[\"deviceName\"] == \"Sensor01\")\n  |> filter(fn: (r) => r[\"_field\"] == \"Bearing\" or r[\"_field\"] == \"Unbalance\" or r[\"_field\"] == \"Misalignment\" or r[\"_field\"] == \"Losseness\" or r[\"_field\"] == \"Gear_mesh\" or r[\"_field\"] == \"Van_Pass\")\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> yield(name: \"mean\")",
+          "query": "from(bucket: \"Hourly_Bucket\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"readings\")\n  |> filter(fn: (r) => r[\"deviceName\"] == \"Sensor01\")\n  |> filter(fn: (r) => r[\"_field\"] == \"Bearing\" or r[\"_field\"] == \"Unbalance\" or r[\"_field\"] == \"Misalignment\" or r[\"_field\"] == \"Looseness\" or r[\"_field\"] == \"Gear_mesh\" or r[\"_field\"] == \"Van_Pass\")\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> yield(name: \"mean\")",
           "refId": "A"
         }
       ],
@@ -1183,7 +1129,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1220,7 +1167,7 @@
             "type": "influxdb",
             "uid": "ijDJ0Ge4z"
           },
-          "query": "from(bucket: \"Hourly_Bucket\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"readings\")\n  |> filter(fn: (r) => r[\"deviceName\"] == \"Sensor01\")\n  |> filter(fn: (r) => r[\"_field\"] == \"Bearing_percentage\" or r[\"_field\"] == \"Gear_mesh_percentage\" or r[\"_field\"] == \"Losseness_percentage\" or r[\"_field\"] == \"Misalignment_percentage\" or r[\"_field\"] == \"Unbalance_percentage\" or r[\"_field\"] == \"Van_Pass_percentage\")\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> yield(name: \"mean\")",
+          "query": "from(bucket: \"Hourly_Bucket\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"readings\")\n  |> filter(fn: (r) => r[\"deviceName\"] == \"Sensor01\")\n  |> filter(fn: (r) => r[\"_field\"] == \"Bearing_percentage\" or r[\"_field\"] == \"Gear_mesh_percentage\" or r[\"_field\"] == \"Looseness_percentage\" or r[\"_field\"] == \"Misalignment_percentage\" or r[\"_field\"] == \"Unbalance_percentage\" or r[\"_field\"] == \"Van_Pass_percentage\")\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> yield(name: \"mean\")",
           "refId": "A"
         }
       ],
@@ -1266,7 +1213,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "#EAB839",
@@ -1363,7 +1311,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1421,7 +1370,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "#EAB839",
@@ -1469,7 +1419,7 @@
           "refId": "A"
         }
       ],
-      "title": "Bearing Energy",
+      "title": "Bearing Defect",
       "type": "stat"
     },
     {
@@ -1487,7 +1437,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "#EAB839",
@@ -1553,7 +1504,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "#EAB839",
@@ -1619,7 +1571,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "#EAB839",
@@ -1663,7 +1616,7 @@
             "type": "influxdb",
             "uid": "ijDJ0Ge4z"
           },
-          "query": "from(bucket: \"Daily_Bucket\")\n  |> range(start: 2023-01-01T00:00:00Z)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"readings\")\n  |> filter(fn: (r) => r[\"deviceName\"] == \"Sensor01\")\n  |> filter(fn: (r) => r[\"_field\"] == \"Losseness\")\n  |> difference(nonNegative: false, columns: [\"_value\"])\n  |> stateCount(fn: (r) => r._value >0, column: \"stateCount\") \n  |> map(fn: (r) => ({ r with _value: if r.stateCount >0 then r.stateCount else 0 })) \n  |> drop(columns: [\"stateCount\"]) \n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\n  |> yield(name: \"last\")",
+          "query": "from(bucket: \"Daily_Bucket\")\n  |> range(start: 2023-01-01T00:00:00Z)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"readings\")\n  |> filter(fn: (r) => r[\"deviceName\"] == \"Sensor01\")\n  |> filter(fn: (r) => r[\"_field\"] == \"Looseness\")\n  |> difference(nonNegative: false, columns: [\"_value\"])\n  |> stateCount(fn: (r) => r._value >0, column: \"stateCount\") \n  |> map(fn: (r) => ({ r with _value: if r.stateCount >0 then r.stateCount else 0 })) \n  |> drop(columns: [\"stateCount\"]) \n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\n  |> yield(name: \"last\")",
           "refId": "A"
         }
       ],
@@ -1685,7 +1638,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "#EAB839",
@@ -1751,7 +1705,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "#EAB839",
@@ -1848,7 +1803,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1884,7 +1840,7 @@
             "type": "influxdb",
             "uid": "ijDJ0Ge4z"
           },
-          "query": "from(bucket: \"Daily_Bucket\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"readings\")\n  |> filter(fn: (r) => r[\"deviceName\"] == \"Sensor01\")\n  |> filter(fn: (r) => r[\"_field\"] == \"Bearing\" or r[\"_field\"] == \"Unbalance\" or r[\"_field\"] == \"Misalignment\" or r[\"_field\"] == \"Losseness\" or r[\"_field\"] == \"Gear_mesh\" or r[\"_field\"] == \"Van_Pass\")\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> yield(name: \"mean\")",
+          "query": "from(bucket: \"Daily_Bucket\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"readings\")\n  |> filter(fn: (r) => r[\"deviceName\"] == \"Sensor01\")\n  |> filter(fn: (r) => r[\"_field\"] == \"Bearing\" or r[\"_field\"] == \"Unbalance\" or r[\"_field\"] == \"Misalignment\" or r[\"_field\"] == \"Looseness\" or r[\"_field\"] == \"Gear_mesh\" or r[\"_field\"] == \"Van_Pass\")\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> yield(name: \"mean\")",
           "refId": "A"
         }
       ],
@@ -1937,7 +1893,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1974,7 +1931,7 @@
             "type": "influxdb",
             "uid": "ijDJ0Ge4z"
           },
-          "query": "from(bucket: \"Daily_Bucket\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"readings\")\n  |> filter(fn: (r) => r[\"deviceName\"] == \"Sensor01\")\n  |> filter(fn: (r) => r[\"_field\"] == \"Bearing_percentage\" or r[\"_field\"] == \"Gear_mesh_percentage\" or r[\"_field\"] == \"Losseness_percentage\" or r[\"_field\"] == \"Misalignment_percentage\" or r[\"_field\"] == \"Unbalance_percentage\" or r[\"_field\"] == \"Van_Pass_percentage\")\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> yield(name: \"mean\")",
+          "query": "from(bucket: \"Daily_Bucket\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"readings\")\n  |> filter(fn: (r) => r[\"deviceName\"] == \"Sensor01\")\n  |> filter(fn: (r) => r[\"_field\"] == \"Bearing_percentage\" or r[\"_field\"] == \"Gear_mesh_percentage\" or r[\"_field\"] == \"Looseness_percentage\" or r[\"_field\"] == \"Misalignment_percentage\" or r[\"_field\"] == \"Unbalance_percentage\" or r[\"_field\"] == \"Van_Pass_percentage\")\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> yield(name: \"mean\")",
           "refId": "A"
         }
       ],
@@ -1997,6 +1954,6 @@
   "timezone": "",
   "title": "211HM1-B1-Temp",
   "uid": "lNiPmUISk",
-  "version": 20,
+  "version": 27,
   "weekStart": ""
 }
