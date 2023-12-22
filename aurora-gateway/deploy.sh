@@ -59,8 +59,8 @@ fi
 
 ## Copy resource to file system
 sudo mkdir -p /usr/share/texol/picture
-sudo cp -rf picture/* /usr/share/texol/picture
-sudo cp -rf GatewayIP.txt /usr/share/texol
+sudo cp -rf config/picture/* /usr/share/texol/picture
+sudo cp -rf config/GatewayIP.txt /usr/share/texol
 
 if [ "$TEST" = "--test" ]; then
   echo "running test mode with eval compose file."
@@ -73,30 +73,27 @@ echo "EDGEXPERT_PROJECT = $EDGEXPERT_PROJECT"
 echo "Launching Edge Xpert with the required microservices..."
 edgexpert up xpert-manager sys-mgmt influxdb grafana
 
-# Sleep
 sleep 10s
 
-echo "Uploading the device profile..."
-echo "Sensor Type: $SENSOR_TYPE"
-if [ "$SENSOR_TYPE" = "mqtt" ] || [ "$SENSOR_TYPE" = "both" ]; then
-  # Start MQTT related services
-  edgexpert up device-mqtt texol-broker texol-ble-driver
+## create buckets
+./tools/influx_cmd.sh "bucket" "create -o texol -n Hourly_Bucket -r 100d"
+sleep 1s
+./tools/influx_cmd.sh "bucket" "create -o texol -n Daily_Bucket -r 730d"
+sleep 1s
 
-  # Upload MQTT device profile for BLE sensors
-  execute_command_until_success 2 201 curl -s -o /dev/null -w "%{http_code}" -X POST http://localhost:59881/api/v2/deviceprofile/uploadfile -F "file=@deviceprofile/Texol_211HM1-B1_v2_10.yaml"
-  sleep 1s
-  execute_command_until_success 2 201 curl -s -o /dev/null -w "%{http_code}" -X POST http://localhost:59881/api/v2/deviceprofile/uploadfile -F "file=@deviceprofile/Texol_213MM1-B1_v2_10.yaml"
-  sleep 1s
-fi
+## create tasks
+./tools/influx_cmd.sh "task" "./config/influxdb/daily_avg.json"
+sleep 1s
+./tools/influx_cmd.sh "task" "./config/influxdb/hourly_avg.json"
+sleep 1s
 
-if [ "$SENSOR_TYPE" = "modbus" ] || [ "$SENSOR_TYPE" = "both" ]; then
-  # Start Modbus RTU related services
-  edgexpert up device-modbus
 
-  # Upload MQTT device profile for BLE sensors
-  execute_command_until_success 2 201 curl -s -o /dev/null -w "%{http_code}" -X POST http://localhost:59881/api/v2/deviceprofile/uploadfile -F "file=@deviceprofile/Texol_213MM2-R1_v1_72.yaml"
-  sleep 1s
-fi
+##
+## setup Grafana Dashboard
+##
+echo "Configuring the Grafana InfluxDB datasource..."
+execute_command_until_success 2 200 curl -s -o /dev/null -w "%{http_code}" -X POST -H "Content-Type:application/json" -u admin:admin http://localhost:3000/api/datasources -d '{"name":"InfluxDB","type":"influxdb","isDefault":true,"url":"http://influxdb:8086","access":"proxy","basicAuth":false,"jsonData":{"organization":"texol","defaultBucket":"bucket","version":"Flux"},"secureJsonData":{"token":"texol-password"}}'
+
 
 
 ##
@@ -116,9 +113,34 @@ if [ "$response" -eq 404 ]; then
   ## create Influxdb exporter
   POST_DATA='{"name":'${INFLUXDB_APP_NAME}',"logLevel":"INFO","destination":"InfluxDB","influxDBSyncWrite":{"influxDBServerURL":"http://influxdb:8086","influxDBOrganization":"texol","influxDBBucket":"bucket","token":"texol-password","influxDBMeasurement":"readings","fieldKeyPattern":"{resourceName}","influxDBValueType":"float","influxDBPrecision":"us","authMode":"token","secretPath":"influxdb","skipVerify":"true","persistOnError":"false","storeEventTags":"true","storeReadingTags":"false"}}'
   register_appservice "$API_ENDPOINT/appSvcConf" "$GUI_ACCESS_TOKEN" "$POST_DATA"
+
 else
     echo "***The $INFLUXDB_APP_NAME exsit! Please remove it and try it again"
 fi
+
+
+echo "Uploading the device profile..."
+echo "Sensor Type: $SENSOR_TYPE"
+if [ "$SENSOR_TYPE" = "mqtt" ] || [ "$SENSOR_TYPE" = "both" ]; then
+  # Start MQTT related services
+  edgexpert up device-mqtt texol-broker texol-ble-driver
+
+  # Upload MQTT device profile for BLE sensors
+  execute_command_until_success 2 201 curl -s -o /dev/null -w "%{http_code}" -X POST http://localhost:59881/api/v2/deviceprofile/uploadfile -F "file=@config/deviceprofile/Texol_211HM1-B1_v2_10.yaml"
+  sleep 1s
+  execute_command_until_success 2 201 curl -s -o /dev/null -w "%{http_code}" -X POST http://localhost:59881/api/v2/deviceprofile/uploadfile -F "file=@config/deviceprofile/Texol_213MM1-B1_v2_10.yaml"
+  sleep 1s
+fi
+
+if [ "$SENSOR_TYPE" = "modbus" ] || [ "$SENSOR_TYPE" = "both" ]; then
+  # Start Modbus RTU related services
+  edgexpert up device-modbus
+
+  # Upload MQTT device profile for BLE sensors
+  execute_command_until_success 2 201 curl -s -o /dev/null -w "%{http_code}" -X POST http://localhost:59881/api/v2/deviceprofile/uploadfile -F "file=@config/deviceprofile/Texol_213MM2-R1_v1_72.yaml"
+  sleep 1s
+fi
+
 
 echo "Finish!"
 exit 0

@@ -26,7 +26,7 @@ fi
 edgexpert_deb=edgexpert-"$xpert_version"_"$arch".deb
 
 # Download EdgeXpert CLI installation
-wget https://iotech.jfrog.io/artifactory/edgexpert-releases/edgexpert/deb/edgexpert-"$edgexpert_deb"
+wget https://iotech.jfrog.io/artifactory/edgexpert-releases/edgexpert/deb/"$edgexpert_deb"
 
 sudo dpkg -i "$edgexpert_deb"
 rm -rf "$edgexpert_deb"
