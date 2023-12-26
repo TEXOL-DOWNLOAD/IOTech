@@ -76,7 +76,7 @@ edgexpert up xpert-manager sys-mgmt influxdb grafana
 sleep 10s
 
 ## create buckets
-./tools/influx_cmd.sh "bucket" "create -o texol -n Hourly_Bucket -r 100d"
+./tools/influx_cmd.sh "bucket" "create -o texol -n Hourly_Bucket -r 730d"
 sleep 1s
 ./tools/influx_cmd.sh "bucket" "create -o texol -n Daily_Bucket -r 730d"
 sleep 1s
