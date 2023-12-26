@@ -17,12 +17,10 @@ parse_json_command() {
     exchange="option task = {name: \"$name\", every: $every} $query"
 }
 
-if [ "$1" = "bucket" ]; then
-    execute_influx_command "bucket $2"
-elif [ "$1" = "task" ]; then
+if [ "$1" = "task" ]; then
     parse_json_command "$2"
     tmp=$(printf "task create '%s'\n" "$exchange")
     execute_influx_command "$tmp"
 else
-    echo "unknow command!"
+    execute_influx_command "$1 $2"
 fi
