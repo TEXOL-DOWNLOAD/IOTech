@@ -19,3 +19,13 @@ if ! command -v json_pp &> /dev/null; then
 else
     echo "json_pp is already installed."
 fi
+
+# Check if jq is installed
+if ! command -v jq &> /dev/null; then
+    echo "jq is not installed, starting installation..."
+    sudo apt-get update
+    sudo apt-get install -y jq
+    echo "jq installation completed!"
+else
+    echo "jq is already installed."
+fi
