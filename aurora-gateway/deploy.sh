@@ -71,6 +71,7 @@ fi
 echo "EDGEXPERT_PROJECT = $EDGEXPERT_PROJECT"
 
 echo "Launching Edge Xpert with the required microservices..."
+edgexpert pull core-keeper core-metadata core-data core-command mqtt-broker redis xpert-manager sys-mgmt influxdb grafana
 edgexpert up xpert-manager sys-mgmt influxdb grafana
 
 sleep 10s
